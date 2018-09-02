@@ -1,8 +1,6 @@
 
-
 import React, { Component } from 'react';
 
- 
 export default class Task extends Component {
 
   render() {
@@ -10,6 +8,5 @@ export default class Task extends Component {
       <li>{this.props.task.text}</li>
     );
   }
-
 }
 
