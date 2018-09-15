@@ -5,3 +5,512 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 61ms (Views: 40.1ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-09-15 14:00:36 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 1654ms (Views: 1646.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-15 14:02:56 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-15 14:08:05 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 662ms (Views: 656.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-15 14:10:18 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 680ms (Views: 675.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-15 14:13:47 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Hash: f47ad1c5074cfc17dc6b
+Version: webpack 3.12.0
+Time: 2880ms
+                                         Asset       Size  Chunks                    Chunk Names
+                 index-c95eb9263cdd4e021b75.js    1.62 MB       0  [emitted]  [big]  index
+           application-32222d7037dc167e7f25.js    3.27 kB       1  [emitted]         application
+    index-18c984d720e0314284860beb69304dcc.css  951 bytes       0  [emitted]         index
+             index-c95eb9263cdd4e021b75.js.map    1.77 MB       0  [emitted]         index
+index-18c984d720e0314284860beb69304dcc.css.map    1.23 kB       0  [emitted]         index
+       application-32222d7037dc167e7f25.js.map    3.19 kB       1  [emitted]         application
+                                 manifest.json  402 bytes          [emitted]         
+  [34] (webpack)/buildin/global.js 509 bytes {0} [built]
+  [89] ./app/javascript/packs/application.js 515 bytes {1} [built]
+  [90] ./app/javascript/packs/index.js 585 bytes {0} [built]
+ [118] (webpack)/buildin/harmony-module.js 596 bytes {0} [built]
+    + 261 hidden modules
+
+ERROR in ./app/javascript/components/index.js
+Module not found: Error: Can't resolve '../../node_modules/@material-ui/core' in '/home/lana/Documents/UXProject/app/javascript/components'
+ @ ./app/javascript/components/index.js 22:0-75
+ @ ./app/javascript/packs/index.js
+
+ERROR in ./app/javascript/packs/index.js
+Module not found: Error: Can't resolve './index.css' in '/home/lana/Documents/UXProject/app/javascript/packs'
+ @ ./app/javascript/packs/index.js 3:0-21
+
+ERROR in ./app/javascript/packs/index.js
+Module not found: Error: Can't resolve './registerServiceWorker' in '/home/lana/Documents/UXProject/app/javascript/packs'
+ @ ./app/javascript/packs/index.js 6:0-60
+
+ERROR in ./app/javascript/components/createPost.js
+Module not found: Error: Can't resolve '@material-ui/icons/AccountCircle' in '/home/lana/Documents/UXProject/app/javascript/components'
+ @ ./app/javascript/components/createPost.js 21:0-61
+ @ ./app/javascript/components/index.js
+ @ ./app/javascript/packs/index.js
+
+ERROR in ./app/javascript/components/Viajes.js
+Module not found: Error: Can't resolve '@material-ui/icons/Favorite' in '/home/lana/Documents/UXProject/app/javascript/components'
+ @ ./app/javascript/components/Viajes.js 20:0-55
+ @ ./app/javascript/components/index.js
+ @ ./app/javascript/packs/index.js
+
+ERROR in ./app/javascript/components/Animales.js
+Module not found: Error: Can't resolve '@material-ui/icons/Favorite' in '/home/lana/Documents/UXProject/app/javascript/components'
+ @ ./app/javascript/components/Animales.js 20:0-55
+ @ ./app/javascript/components/index.js
+ @ ./app/javascript/packs/index.js
+
+ERROR in ./app/javascript/components/Home.js
+Module not found: Error: Can't resolve '@material-ui/icons/Favorite' in '/home/lana/Documents/UXProject/app/javascript/components'
+ @ ./app/javascript/components/Home.js 14:0-55
+ @ ./app/javascript/components/index.js
+ @ ./app/javascript/packs/index.js
+
+ERROR in ./app/javascript/components/Fashion.js
+Module not found: Error: Can't resolve '@material-ui/icons/Favorite' in '/home/lana/Documents/UXProject/app/javascript/components'
+ @ ./app/javascript/components/Fashion.js 20:0-55
+ @ ./app/javascript/components/index.js
+ @ ./app/javascript/packs/index.js
+
+ERROR in ./app/javascript/components/Fitness.js
+Module not found: Error: Can't resolve '@material-ui/icons/Favorite' in '/home/lana/Documents/UXProject/app/javascript/components'
+ @ ./app/javascript/components/Fitness.js 20:0-55
+ @ ./app/javascript/components/index.js
+ @ ./app/javascript/packs/index.js
+
+ERROR in ./app/javascript/components/Comida.js
+Module not found: Error: Can't resolve '@material-ui/icons/Favorite' in '/home/lana/Documents/UXProject/app/javascript/components'
+ @ ./app/javascript/components/Comida.js 24:0-55
+ @ ./app/javascript/components/index.js
+ @ ./app/javascript/packs/index.js
+
+ERROR in ./app/javascript/components/index.js
+Module not found: Error: Can't resolve '@material-ui/icons/Menu' in '/home/lana/Documents/UXProject/app/javascript/components'
+ @ ./app/javascript/components/index.js 24:0-47
+ @ ./app/javascript/packs/index.js
+
+ERROR in ./app/javascript/components/Viajes.js
+Module not found: Error: Can't resolve '@material-ui/icons/MoreVert' in '/home/lana/Documents/UXProject/app/javascript/components'
+ @ ./app/javascript/components/Viajes.js 18:0-55
+ @ ./app/javascript/components/index.js
+ @ ./app/javascript/packs/index.js
+
+ERROR in ./app/javascript/components/Comida.js
+Module not found: Error: Can't resolve '@material-ui/icons/MoreVert' in '/home/lana/Documents/UXProject/app/javascript/components'
+ @ ./app/javascript/components/Comida.js 22:0-55
+ @ ./app/javascript/components/index.js
+ @ ./app/javascript/packs/index.js
+
+ERROR in ./app/javascript/components/Animales.js
+Module not found: Error: Can't resolve '@material-ui/icons/MoreVert' in '/home/lana/Documents/UXProject/app/javascript/components'
+ @ ./app/javascript/components/Animales.js 18:0-55
+ @ ./app/javascript/components/index.js
+ @ ./app/javascript/packs/index.js
+
+ERROR in ./app/javascript/components/Home.js
+Module not found: Error: Can't resolve '@material-ui/icons/MoreVert' in '/home/lana/Documents/UXProject/app/javascript/components'
+ @ ./app/javascript/components/Home.js 27:0-55
+ @ ./app/javascript/components/index.js
+ @ ./app/javascript/packs/index.js
+
+ERROR in ./app/javascript/components/Fashion.js
+Module not found: Error: Can't resolve '@material-ui/icons/MoreVert' in '/home/lana/Documents/UXProject/app/javascript/components'
+ @ ./app/javascript/components/Fashion.js 18:0-55
+ @ ./app/javascript/components/index.js
+ @ ./app/javascript/packs/index.js
+
+ERROR in ./app/javascript/components/Fitness.js
+Module not found: Error: Can't resolve '@material-ui/icons/MoreVert' in '/home/lana/Documents/UXProject/app/javascript/components'
+ @ ./app/javascript/components/Fitness.js 18:0-55
+ @ ./app/javascript/components/index.js
+ @ ./app/javascript/packs/index.js
+
+ERROR in ./app/javascript/components/Fashion.js
+Module not found: Error: Can't resolve '@material-ui/icons/Textsms' in '/home/lana/Documents/UXProject/app/javascript/components'
+ @ ./app/javascript/components/Fashion.js 19:0-53
+ @ ./app/javascript/components/index.js
+ @ ./app/javascript/packs/index.js
+
+ERROR in ./app/javascript/components/Fitness.js
+Module not found: Error: Can't resolve '@material-ui/icons/Textsms' in '/home/lana/Documents/UXProject/app/javascript/components'
+ @ ./app/javascript/components/Fitness.js 19:0-53
+ @ ./app/javascript/components/index.js
+ @ ./app/javascript/packs/index.js
+
+ERROR in ./app/javascript/components/Comida.js
+Module not found: Error: Can't resolve '@material-ui/icons/Textsms' in '/home/lana/Documents/UXProject/app/javascript/components'
+ @ ./app/javascript/components/Comida.js 23:0-53
+ @ ./app/javascript/components/index.js
+ @ ./app/javascript/packs/index.js
+
+ERROR in ./app/javascript/components/Home.js
+Module not found: Error: Can't resolve '@material-ui/icons/Textsms' in '/home/lana/Documents/UXProject/app/javascript/components'
+ @ ./app/javascript/components/Home.js 28:0-53
+ @ ./app/javascript/components/index.js
+ @ ./app/javascript/packs/index.js
+
+ERROR in ./app/javascript/components/Animales.js
+Module not found: Error: Can't resolve '@material-ui/icons/Textsms' in '/home/lana/Documents/UXProject/app/javascript/components'
+ @ ./app/javascript/components/Animales.js 19:0-53
+ @ ./app/javascript/components/index.js
+ @ ./app/javascript/packs/index.js
+
+ERROR in ./app/javascript/components/Viajes.js
+Module not found: Error: Can't resolve '@material-ui/icons/Textsms' in '/home/lana/Documents/UXProject/app/javascript/components'
+ @ ./app/javascript/components/Viajes.js 19:0-53
+ @ ./app/javascript/components/index.js
+ @ ./app/javascript/packs/index.js
+
+ERROR in ./app/javascript/components/index.js
+Module not found: Error: Can't resolve 'react-router-dom' in '/home/lana/Documents/UXProject/app/javascript/components'
+ @ ./app/javascript/components/index.js 16:0-80
+ @ ./app/javascript/packs/index.js
+
+ERROR in ./app/javascript/packs/index.js
+Module not found: Error: Can't resolve 'react-router-dom' in '/home/lana/Documents/UXProject/app/javascript/packs'
+ @ ./app/javascript/packs/index.js 4:0-49
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js??ref--1-2!node_modules/postcss-loader/lib/index.js??ref--1-3!app/javascript/components/createPost.css:
+       2 modules
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js??ref--1-2!node_modules/postcss-loader/lib/index.js??ref--1-3!app/javascript/components/App.css:
+       2 modules
+
+  Rendered pages/index.html.erb within layouts/application (4324.1ms)
+Completed 200 OK in 5241ms (Views: 5227.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-15 14:21:33 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Hash: f25aee838d726a5509c7
+Version: webpack 3.12.0
+Time: 2922ms
+                                         Asset       Size  Chunks                    Chunk Names
+                 index-234bbfe9bd78dcd0fd0f.js    1.64 MB       0  [emitted]  [big]  index
+           application-54043de2b32242e6d934.js    3.27 kB       1  [emitted]         application
+    index-18c984d720e0314284860beb69304dcc.css  951 bytes       0  [emitted]         index
+             index-234bbfe9bd78dcd0fd0f.js.map    1.78 MB       0  [emitted]         index
+index-18c984d720e0314284860beb69304dcc.css.map    1.23 kB       0  [emitted]         index
+       application-54043de2b32242e6d934.js.map    3.19 kB       1  [emitted]         application
+                                 manifest.json  402 bytes          [emitted]         
+  [38] (webpack)/buildin/global.js 509 bytes {0} [built]
+  [98] ./app/javascript/packs/application.js 515 bytes {1} [built]
+  [99] ./app/javascript/packs/index.js 585 bytes {0} [built]
+ [127] (webpack)/buildin/harmony-module.js 596 bytes {0} [built]
+    + 274 hidden modules
+
+ERROR in ./app/javascript/components/index.js
+Module not found: Error: Can't resolve '../../node_modules/@material-ui/core' in '/home/lana/Documents/UXProject/app/javascript/components'
+ @ ./app/javascript/components/index.js 22:0-75
+ @ ./app/javascript/packs/index.js
+
+ERROR in ./app/javascript/packs/index.js
+Module not found: Error: Can't resolve './index.css' in '/home/lana/Documents/UXProject/app/javascript/packs'
+ @ ./app/javascript/packs/index.js 3:0-21
+
+ERROR in ./app/javascript/packs/index.js
+Module not found: Error: Can't resolve './registerServiceWorker' in '/home/lana/Documents/UXProject/app/javascript/packs'
+ @ ./app/javascript/packs/index.js 6:0-60
+
+ERROR in ./app/javascript/components/index.js
+Module not found: Error: Can't resolve 'react-router-dom' in '/home/lana/Documents/UXProject/app/javascript/components'
+ @ ./app/javascript/components/index.js 16:0-80
+ @ ./app/javascript/packs/index.js
+
+ERROR in ./app/javascript/packs/index.js
+Module not found: Error: Can't resolve 'react-router-dom' in '/home/lana/Documents/UXProject/app/javascript/packs'
+ @ ./app/javascript/packs/index.js 4:0-49
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js??ref--1-2!node_modules/postcss-loader/lib/index.js??ref--1-3!app/javascript/components/createPost.css:
+       2 modules
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js??ref--1-2!node_modules/postcss-loader/lib/index.js??ref--1-3!app/javascript/components/App.css:
+       2 modules
+
+  Rendered pages/index.html.erb within layouts/application (3848.9ms)
+Completed 200 OK in 4791ms (Views: 4785.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-15 14:24:05 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Hash: f25aee838d726a5509c7
+Version: webpack 3.12.0
+Time: 3088ms
+                                         Asset       Size  Chunks                    Chunk Names
+                 index-234bbfe9bd78dcd0fd0f.js    1.64 MB       0  [emitted]  [big]  index
+           application-54043de2b32242e6d934.js    3.27 kB       1  [emitted]         application
+    index-18c984d720e0314284860beb69304dcc.css  951 bytes       0  [emitted]         index
+             index-234bbfe9bd78dcd0fd0f.js.map    1.78 MB       0  [emitted]         index
+index-18c984d720e0314284860beb69304dcc.css.map    1.23 kB       0  [emitted]         index
+       application-54043de2b32242e6d934.js.map    3.19 kB       1  [emitted]         application
+                                 manifest.json  402 bytes          [emitted]         
+  [38] (webpack)/buildin/global.js 509 bytes {0} [built]
+  [98] ./app/javascript/packs/application.js 515 bytes {1} [built]
+  [99] ./app/javascript/packs/index.js 585 bytes {0} [built]
+ [127] (webpack)/buildin/harmony-module.js 596 bytes {0} [built]
+    + 274 hidden modules
+
+ERROR in ./app/javascript/components/index.js
+Module not found: Error: Can't resolve '../../node_modules/@material-ui/core' in '/home/lana/Documents/UXProject/app/javascript/components'
+ @ ./app/javascript/components/index.js 22:0-75
+ @ ./app/javascript/packs/index.js
+
+ERROR in ./app/javascript/packs/index.js
+Module not found: Error: Can't resolve './index.css' in '/home/lana/Documents/UXProject/app/javascript/packs'
+ @ ./app/javascript/packs/index.js 3:0-21
+
+ERROR in ./app/javascript/packs/index.js
+Module not found: Error: Can't resolve './registerServiceWorker' in '/home/lana/Documents/UXProject/app/javascript/packs'
+ @ ./app/javascript/packs/index.js 6:0-60
+
+ERROR in ./app/javascript/components/index.js
+Module not found: Error: Can't resolve 'react-router-dom' in '/home/lana/Documents/UXProject/app/javascript/components'
+ @ ./app/javascript/components/index.js 16:0-80
+ @ ./app/javascript/packs/index.js
+
+ERROR in ./app/javascript/packs/index.js
+Module not found: Error: Can't resolve 'react-router-dom' in '/home/lana/Documents/UXProject/app/javascript/packs'
+ @ ./app/javascript/packs/index.js 4:0-49
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js??ref--1-2!node_modules/postcss-loader/lib/index.js??ref--1-3!app/javascript/components/createPost.css:
+       2 modules
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js??ref--1-2!node_modules/postcss-loader/lib/index.js??ref--1-3!app/javascript/components/App.css:
+       2 modules
+
+  Rendered pages/index.html.erb within layouts/application (4050.1ms)
+Completed 200 OK in 5035ms (Views: 5030.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-15 14:24:54 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-15 14:27:12 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 970ms (Views: 964.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-15 14:29:55 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 978ms (Views: 973.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-15 14:29:57 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-15 14:33:53 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 993ms (Views: 988.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-15 14:43:47 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 1065ms (Views: 1059.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-15 14:44:55 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 27ms (Views: 23.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-15 14:47:16 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 1487ms (Views: 1480.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-15 14:51:43 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 1103ms (Views: 1098.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-15 14:53:57 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 1073ms (Views: 1068.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-15 14:54:38 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-15 14:54:45 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 32ms (Views: 28.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/packs/index-853c70cabf415531d946.js.map" for 127.0.0.1 at 2018-09-15 14:57:53 -0600
+Processing by PagesController#index as 
+  Parameters: {"path"=>"packs/index-853c70cabf415531d946.js"}
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /home/lana/Documents/UXProject/public/packs
+  Rendered pages/index.html.erb within layouts/application (5306.0ms)
+Completed 200 OK in 5324ms (Views: 5318.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-15 14:59:13 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-15 15:02:48 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+Hash: 3974ae4b00f9178f430a
+Version: webpack 3.12.0
+Time: 1981ms
+                                            Asset       Size  Chunks                    Chunk Names
+                    index-15817c1bb74bcdb288eb.js    1.16 MB    0, 1  [emitted]  [big]  index
+    registerServiceWorker-c60b02ff094116428200.js    7.24 kB       1  [emitted]         registerServiceWorker
+              application-a0dd21546d6f2f96c913.js    3.27 kB       2  [emitted]         application
+       index-8c28eaf31cb025a1d4a25456a38c18f7.css  133 bytes    0, 1  [emitted]         index
+                index-15817c1bb74bcdb288eb.js.map     1.3 MB    0, 1  [emitted]         index
+   index-8c28eaf31cb025a1d4a25456a38c18f7.css.map  331 bytes    0, 1  [emitted]         index
+registerServiceWorker-c60b02ff094116428200.js.map    7.67 kB       1  [emitted]         registerServiceWorker
+          application-a0dd21546d6f2f96c913.js.map    3.19 kB       2  [emitted]         application
+                                    manifest.json  582 bytes          [emitted]         
+  [18] (webpack)/buildin/global.js 509 bytes {0} [built]
+  [27] ./app/javascript/packs/registerServiceWorker.js 4.24 kB {0} {1} [built]
+  [59] ./app/javascript/packs/application.js 515 bytes {2} [built]
+  [60] ./app/javascript/packs/index.js 594 bytes {0} [built]
+  [68] ./app/javascript/packs/index.css 41 bytes {0} [built]
+ [119] (webpack)/buildin/harmony-module.js 596 bytes {0} [built]
+ [160] ./node_modules/css-loader??ref--1-2!./node_modules/postcss-loader/lib??ref--1-3!./app/javascript/packs/index.css 515 bytes [built]
+    + 157 hidden modules
+
+ERROR in ./app/javascript/components/index.js
+Module build failed: SyntaxError: Unexpected token, expected , (128:20)
+
+  126 |         );
+  127 |         return (
+> 128 |             {console.log("hi")}
+      |                     ^
+  129 |             <div className={this.classes.root}>
+  130 | 
+  131 |                 <AppBar position="static" color="default" style={{ position: 'fixed', top: 0 , left : 0,  margin: 0}}>
+
+ @ ./app/javascript/packs/index.js 5:0-41
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js??ref--1-2!node_modules/postcss-loader/lib/index.js??ref--1-3!app/javascript/packs/index.css:
+       [0] ./node_modules/css-loader??ref--1-2!./node_modules/postcss-loader/lib??ref--1-3!./app/javascript/packs/index.css 515 bytes {0} [built]
+        + 1 hidden module
+
+  Rendered pages/index.html.erb within layouts/application (2929.7ms)
+Completed 200 OK in 2939ms (Views: 2938.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-15 15:03:16 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /home/lana/Documents/UXProject/public/packs
+  Rendered pages/index.html.erb within layouts/application (5606.5ms)
+Completed 200 OK in 5627ms (Views: 5626.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-15 15:09:04 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /home/lana/Documents/UXProject/public/packs
+  Rendered pages/index.html.erb within layouts/application (5650.1ms)
+Completed 200 OK in 5663ms (Views: 5661.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-15 15:09:56 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /home/lana/Documents/UXProject/public/packs
+  Rendered pages/index.html.erb within layouts/application (5470.9ms)
+Completed 200 OK in 5481ms (Views: 5480.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-15 15:11:01 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /home/lana/Documents/UXProject/public/packs
+  Rendered pages/index.html.erb within layouts/application (5425.5ms)
+Completed 200 OK in 5436ms (Views: 5435.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-15 15:13:56 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /home/lana/Documents/UXProject/public/packs
+  Rendered pages/index.html.erb within layouts/application (5466.0ms)
+Completed 200 OK in 5476ms (Views: 5475.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-15 15:14:38 -0600
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /home/lana/Documents/UXProject/public/packs
+  Rendered pages/index.html.erb within layouts/application (5572.5ms)
+Completed 200 OK in 5584ms (Views: 5583.4ms | ActiveRecord: 0.0ms)
+
+
