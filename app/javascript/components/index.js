@@ -16,6 +16,7 @@ import Fitness from './Fitness';
 import Fashion from './Fashion';
 import Animales from './Animales';
 import createPost from './createPost';
+import Register from './Register';
 
 const styles = {
     root: {
@@ -120,13 +121,17 @@ class App extends Component {
                 <Link to="/createPost">
                     <Button style={{ color: 'primary' }} >Create Post</Button>
                 </Link>
+                <Link to="/Register">
+                    <Button style={{ color: 'primary' }} >Register</Button>
+                </Link>
 
                 {authButtons}
             </div>
         );
         return (
+
             <div className={this.classes.root}>
-                {console.log("hi")}
+
                 <AppBar position="static" color="default" style={{ position: 'fixed', top: 0 , left : 0,  margin: 0}}>
                     <Toolbar>
                         
@@ -174,6 +179,11 @@ class App extends Component {
                                 authed={this.state.authed}
                                 path="/createPost"
                                 component={createPost}
+                            />
+                            <PublicRoute
+                                authed={this.state.authed}
+                                path="/Register"
+                                component={Register}
                             />
                             <Route render={() => <h3>No aaaa Match</h3>} />
                         </Switch>

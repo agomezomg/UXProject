@@ -26,18 +26,15 @@ const styles = {
 
 class Register extends Component {
 
-	classes = {};
-	constructor(props) {
-		super(props)
-		this.state = {
-			users: []
-		};
-	}
+    classes = {};
+    constructor(props) {
+        super(props)
+    }
 
     render() {
         const { classes } = this.props;
         return (
-            <div style={{ height: "1000px", width: "100%", backgroundImage: `url("http://getwallpapers.com/wallpaper/full/6/c/0/955354-mac-background-pictures-1920x1200-image.jpg")` }}>
+            <div style={{ height: "1000px", width: "100%", backgroundImage: `url("https://data.whicdn.com/images/41622801/original.jpg")` }}>
                 lol
                 lol
                 lol
@@ -70,7 +67,7 @@ class Register extends Component {
                 </div>
                 <div style={{ display: "flex",justifyContent: 'center', alignItems: 'baseline', margin: 30 }}>
                     <Button variant="contained" color="secondary" className={classes.button}>
-                        Iniciar Sesion
+                        Crear Cuenta
                     </Button>
                 </div>
             </div>
