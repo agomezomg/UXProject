@@ -68,7 +68,7 @@ class Home extends Component {
     const { classes } = this.props;
     const { spacing } = this.state;
     return (
-      <div className={classes.root}>
+      <div className={classes.root} style={{ height: "1000px", width: "100%", backgroundImage: `url("https://bruceellingson.com/wallpaper/goose/goose1920x1200.jpg")` }}>
         <div>
           <div>
             <Grid container className={classes.root} spacing={20}>
