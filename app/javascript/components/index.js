@@ -147,27 +147,27 @@ class App extends Component {
                             <Route path="/" exact component={Home} />
                             <PublicRoute
                                 authed={this.state.authed}
-                                path="/Viajes"
+                                path="/viajes"
                                 component={Viajes}
                             />
                             <PublicRoute
                                 authed={this.state.authed}
-                                path="/Fitness"
+                                path="/fitness"
                                 component={Fitness}
                             />
                             <PublicRoute
                                 authed={this.state.authed}
-                                path="/Comida"
+                                path="/comida"
                                 component={Comida}
                             />
                             <PublicRoute
                                 authed={this.state.authed}
-                                path="/Fashion"
+                                path="/fashion"
                                 component={Fashion}
                             />
                             <PublicRoute
                                 authed={this.state.authed}
-                                path="/Animales"
+                                path="/animales"
                                 component={Animales}
                             />
                             <PublicRoute
@@ -182,7 +182,7 @@ class App extends Component {
                             />
                             <PublicRoute
                                 authed={this.state.authed}
-                                path="/Register"
+                                path="/register"
                                 component={Register}
                             />
                             <Route render={() => <h3>No aaaa Match</h3>} />
