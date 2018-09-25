@@ -54,8 +54,12 @@ class Home extends Component {
     this.classes = props.classes;
     this.state = {
       spacing: '40',
+      posts: []
     }
+  }
 
+  componentDidMount() {
+    alert("componentDidMount");
   }
 
   handleChange = key => (event, value) => {
