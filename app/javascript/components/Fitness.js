@@ -74,7 +74,7 @@ class Fitness extends Component {
         if (doc.theme=="Fitness") {
           return(
             <div>
-           <Card className={classes.card} key = {i}>
+           <Card className={classes.card} key = {i} style={{width:"370px"}}>
               <CardHeader
                 avatar={
                   <Avatar aria-label="Recipe" className={classes.avatar}>
@@ -120,7 +120,7 @@ class Fitness extends Component {
       });
 
       return (
-        <div>
+        <div style={{ height: "1000px", width: "100%", backgroundImage: `url("https://stepintomyshoes.files.wordpress.com/2010/10/freework.jpg")` }}>
           <div className="text-center" >
             <h2 className="text-center" >Public Posts</h2>
             {data}

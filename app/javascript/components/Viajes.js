@@ -75,7 +75,7 @@ class Viajes extends Component {
             if (doc.theme=="Viajes") {
               return (
                 <div>
-           <Card className={classes.card} key = {i}>
+           <Card className={classes.card} key = {i} style={{width:"370px"}}>
               <CardHeader
                 avatar={
                   <Avatar aria-label="Recipe" className={classes.avatar}>
@@ -120,7 +120,7 @@ class Viajes extends Component {
           }
         });
         return (
-            <div>
+            <div style={{ height: "1000px", width: "100%", backgroundImage: `url("https://www.momentier.com/wp-content/uploads/2017/11/MUST-HAVE-GEARS-FOR-TRAVEL-PHOTOGRAPHY-OR-VIDEOGRAPHY%E2%80%93-SHOOT-LIKE-A-PRO.jpeg")` }}>
               <div className="text-center" >
                 <h2 className="text-center" >Public Posts</h2>
                 {data}

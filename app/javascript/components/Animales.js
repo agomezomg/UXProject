@@ -73,7 +73,7 @@ class Animales extends Component {
             if (doc.theme=="Animales") {
               return(
                <div>
-           <Card className={classes.card} key = {i}>
+           <Card className={classes.card} key = {i} style={{width:"370px"}}>
               <CardHeader
                 avatar={
                   <Avatar aria-label="Recipe" className={classes.avatar}>
@@ -119,7 +119,7 @@ class Animales extends Component {
     });
 
     return (
-        <div>
+        <div style={{ height: "1000px", width: "100%", backgroundImage: `url("https://www.dirtiedogphotography.com/wp-content/uploads/2018/01/silhouette1.jpg")` }}>
         <div className="text-center" >
           <h2 className="text-center" >Public Posts</h2>
           {data}

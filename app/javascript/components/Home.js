@@ -37,8 +37,8 @@ const styles = {
     marginRight: 20,
   },
   card: {
-    padding: 16,
-    margin: 40,
+    padding: 0,
+    margin: 0,
     Width: 100,
   },
   media: {
@@ -90,7 +90,7 @@ class Home extends Component {
     let data = this.state.posts.map((doc,i)=> {
       return(
         <div>
-           <Card className={classes.card} key = {i} style={{width:"100px"}}>
+           <Card className={classes.card} key = {i} style={{width:"370px"}}>
               <CardHeader
                 avatar={
                   <Avatar aria-label="Recipe" className={classes.avatar}>h
@@ -135,7 +135,7 @@ class Home extends Component {
     })
 
     return (
-      <div>
+      <div style={{ height: "1000px", width: "100%", backgroundImage: `url("https://bruceellingson.com/wallpaper/goose/goose1920x1200.jpg")` }}>
         <div className="text-center" >
           <h2 className="text-center" >Public Posts</h2>
           {data}

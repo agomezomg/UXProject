@@ -75,7 +75,7 @@ class Comida extends Component {
             if (doc.theme=="Comida") {
               return (
                 <div>
-           <Card className={classes.card} key = {i}>
+          <Card className={classes.card} key = {i} style={{width:"370px"}}>
               <CardHeader
                 avatar={
                   <Avatar aria-label="Recipe" className={classes.avatar}>
@@ -120,7 +120,7 @@ class Comida extends Component {
           }
         });
         return (
-            <div>
+            <div style={{ height: "1000px", width: "100%", backgroundImage: `url("https://images.pexels.com/photos/459469/pexels-photo-459469.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")` }}>
               <div className="text-center" >
                 <h2 className="text-center" >Public Posts</h2>
                 {data}

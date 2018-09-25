@@ -74,7 +74,7 @@ class Fashion extends Component {
             if (doc.theme=="Fashion") {
               return(
                 <div>
-           <Card className={classes.card} key = {i}>
+           <Card className={classes.card} key = {i} style={{width:"370px"}}>
               <CardHeader
                 avatar={
                   <Avatar aria-label="Recipe" className={classes.avatar}>
@@ -120,7 +120,7 @@ class Fashion extends Component {
         });
         const { classes } = this.props;
         return (
-            <div>
+            <div style={{ height: "1000px", width: "100%", backgroundImage: `url(" https://lionsheadstudios.com/wp-content/uploads/2016/03/San-Diego-Advertising-Photographers-ASHWORTH_APPAREL_LARGE_08.jpg")` }}>
                 <div className="text-center" >
                     <h2 className="text-center" >Public Posts</h2>
                     {data}
