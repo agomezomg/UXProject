@@ -37,10 +37,9 @@ const styles = {
     marginRight: 20,
   },
   card: {
-    maxWidth: 245,
     padding: 16,
     margin: 40,
-    minWidth: 200,
+    Width: 100,
   },
   media: {
     height: 140,
@@ -91,10 +90,10 @@ class Home extends Component {
     let data = this.state.posts.map((doc,i)=> {
       return(
         <div>
-           <Card className={classes.card} key = {i}>
+           <Card className={classes.card} key = {i} style={{width:"100px"}}>
               <CardHeader
                 avatar={
-                  <Avatar aria-label="Recipe" className={classes.avatar}>
+                  <Avatar aria-label="Recipe" className={classes.avatar}>h
                     A
                   </Avatar>
                 }
