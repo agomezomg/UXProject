@@ -102,7 +102,7 @@ class Home extends Component {
                         <CardHeader
                           avatar={
                             <Avatar aria-label="Recipe" className={classes.avatar}>
-                              R
+                              R //user.email goes here
                             </Avatar>
                           }
                           action={
