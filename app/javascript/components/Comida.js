@@ -74,52 +74,57 @@ class Comida extends Component {
         let data = this.state.posts.map((doc,i)=> {
             if (doc.theme=="Comida") {
               return (
-                <br/>
-                //card contents go here
+                <div>
+           <Card className={classes.card} key = {i}>
+              <CardHeader
+                avatar={
+                  <Avatar aria-label="Recipe" className={classes.avatar}>
+                    A
+                  </Avatar>
+                }
+                action={
+                  <IconButton>
+                    <MoreVertIcon />
+                  </IconButton>
+                }
+                title={doc.title}
+                subheader={doc.theme}
+              />
+
+              <CardMedia>
+                <img src={doc.photourl} />
+              </CardMedia>
+              <CardContent>
+                <Typography component="p">
+                  {doc.description}
+                </Typography>
+              </CardContent>
+              <CardActions className={classes.actions} disableActionSpacing>
+                <Button variant="contained" color="secondary" aria-label="Add to favorites">
+                  Like
+                  <FavoriteIcon className={classes.rightIcon} />
+                </Button>
+                <Button variant="contained" color="secondary" aria-label="Add to favorites">
+                  Comment
+                    <TextsmsIcon className={classes.rightIcon} />
+                </Button>
+              </CardActions>
+              <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
+                <CardContent>
+
+                </CardContent>
+              </Collapse>
+            </Card> 
+        </div>
             )
           }
         });
         return (
-            <div style={{height:"1500px",width:"2000px", backgroundImage: `url("https://images.pexels.com/photos/459469/pexels-photo-459469.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")` } }>
-               
-                
-                <Card className={classes.card}>
-                        <CardHeader
-                          avatar={
-                            <Avatar aria-label="Recipe" className={classes.avatar}>
-                              R
-                            </Avatar>
-                          }
-                          action={
-                            <IconButton>
-                              <MoreVertIcon />
-                            </IconButton>
-                          }
-                          title="Card"
-                          subheader="Comida"
-                        />
-                        
-                        <CardMedia>
-                        <img src='http://rocket-pizza.co.uk/media/catalog/product/cache/16/small_image/215x215/170ec19af00183b5e0368529fc2daa2f/m/a/magherita_2_2_46.jpg'/>
-                        </CardMedia>
-                        <CardContent>
-                          <Typography component="p">
-                            Description del post 
-                          </Typography>
-                        </CardContent>
-                        <CardActions className={classes.actions} disableActionSpacing>
-                          <Button variant="contained" color = "secondary" aria-label="Add to favorites">
-                              Like
-                            <FavoriteIcon className={classes.rightIcon} />
-                          </Button>
-                          <Button variant="contained" color = "secondary" aria-label="Add to favorites">
-                              Comment
-                              <TextsmsIcon className={classes.rightIcon} />
-                          </Button>
-                        </CardActions>
-                      </Card>
-                
-               
+            <div>
+              <div className="text-center" >
+                <h2 className="text-center" >Public Posts</h2>
+                {data}
+              </div>
             </div>
         )
 

@@ -72,53 +72,58 @@ class Fashion extends Component {
         let data = this.state.posts.map((doc,i)=> {
             if (doc.theme=="Fashion") {
               return(
-                <br/>
-                //card contents go here
+                <div>
+           <Card className={classes.card} key = {i}>
+              <CardHeader
+                avatar={
+                  <Avatar aria-label="Recipe" className={classes.avatar}>
+                    A
+                  </Avatar>
+                }
+                action={
+                  <IconButton>
+                    <MoreVertIcon />
+                  </IconButton>
+                }
+                title={doc.title}
+                subheader={doc.theme}
+              />
+
+              <CardMedia>
+                <img src={doc.photourl} />
+              </CardMedia>
+              <CardContent>
+                <Typography component="p">
+                  {doc.description}
+                </Typography>
+              </CardContent>
+              <CardActions className={classes.actions} disableActionSpacing>
+                <Button variant="contained" color="secondary" aria-label="Add to favorites">
+                  Like
+                  <FavoriteIcon className={classes.rightIcon} />
+                </Button>
+                <Button variant="contained" color="secondary" aria-label="Add to favorites">
+                  Comment
+                    <TextsmsIcon className={classes.rightIcon} />
+                </Button>
+              </CardActions>
+              <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
+                <CardContent>
+
+                </CardContent>
+              </Collapse>
+            </Card> 
+        </div>
               )
             }
         });
         const { classes } = this.props;
         return (
-            <div style={{ height: "1300px", width: "2000px", backgroundImage: `url("https://lionsheadstudios.com/wp-content/uploads/2016/03/San-Diego-Advertising-Photographers-ASHWORTH_APPAREL_LARGE_08.jpg")` }}>
-
-
-                <Card className={classes.card}>
-                    <CardHeader
-                        avatar={
-                            <Avatar aria-label="Recipe" className={classes.avatar}>
-                                R
-                        </Avatar>
-                        }
-                        action={
-                            <IconButton>
-                                <MoreVertIcon />
-                            </IconButton>
-                        }
-                        title="Card"
-                        subheader="Fashion"
-                    />
-
-                    <CardMedia style={{width:"215px",height:"215px"}}>
-                        <img src='http://s7.favim.com/flow/150829/clothes-fabulous-fashion-girly-Favim.com-3203797.jpg' />
-                    </CardMedia>
-                    <CardContent>
-                        <Typography component="p">
-                            Description del post
-                      </Typography>
-                    </CardContent>
-                    <CardActions className={classes.actions} disableActionSpacing>
-                        <Button variant="contained" color="secondary" aria-label="Add to favorites">
-                            Like
-                        <FavoriteIcon className={classes.rightIcon} />
-                        </Button>
-                        <Button variant="contained" color="secondary" aria-label="Add to favorites">
-                            Comment
-                          <TextsmsIcon className={classes.rightIcon} />
-                        </Button>
-                    </CardActions>
-                </Card>
-
-
+            <div>
+                <div className="text-center" >
+                    <h2 className="text-center" >Public Posts</h2>
+                    {data}
+                </div>
             </div>
         )
 

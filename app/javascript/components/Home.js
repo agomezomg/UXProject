@@ -92,45 +92,45 @@ class Home extends Component {
       return(
         <div>
            <Card className={classes.card} key = {i}>
-                        <CardHeader
-                          avatar={
-                            <Avatar aria-label="Recipe" className={classes.avatar}>
-                              A
-                            </Avatar>
-                          }
-                          action={
-                            <IconButton>
-                              <MoreVertIcon />
-                            </IconButton>
-                          }
-                          title={doc.title}
-                          subheader={doc.theme}
-                        />
+              <CardHeader
+                avatar={
+                  <Avatar aria-label="Recipe" className={classes.avatar}>
+                    A
+                  </Avatar>
+                }
+                action={
+                  <IconButton>
+                    <MoreVertIcon />
+                  </IconButton>
+                }
+                title={doc.title}
+                subheader={doc.theme}
+              />
 
-                        <CardMedia>
-                          <img src={doc.photourl} />
-                        </CardMedia>
-                        <CardContent>
-                          <Typography component="p">
-                            {doc.description}
-                          </Typography>
-                        </CardContent>
-                        <CardActions className={classes.actions} disableActionSpacing>
-                          <Button variant="contained" color="secondary" aria-label="Add to favorites">
-                            Like
-                            <FavoriteIcon className={classes.rightIcon} />
-                          </Button>
-                          <Button variant="contained" color="secondary" aria-label="Add to favorites">
-                            Comment
-                              <TextsmsIcon className={classes.rightIcon} />
-                          </Button>
-                        </CardActions>
-                        <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
-                          <CardContent>
+              <CardMedia>
+                <img src={doc.photourl} />
+              </CardMedia>
+              <CardContent>
+                <Typography component="p">
+                  {doc.description}
+                </Typography>
+              </CardContent>
+              <CardActions className={classes.actions} disableActionSpacing>
+                <Button variant="contained" color="secondary" aria-label="Add to favorites">
+                  Like
+                  <FavoriteIcon className={classes.rightIcon} />
+                </Button>
+                <Button variant="contained" color="secondary" aria-label="Add to favorites">
+                  Comment
+                    <TextsmsIcon className={classes.rightIcon} />
+                </Button>
+              </CardActions>
+              <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
+                <CardContent>
 
-                          </CardContent>
-                        </Collapse>
-                      </Card> 
+                </CardContent>
+              </Collapse>
+            </Card> 
         </div>
       );
     })
