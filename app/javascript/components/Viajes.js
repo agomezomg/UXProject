@@ -12,6 +12,7 @@ import TextsmsIcon from '@material-ui/icons/Textsms';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
+import Collapse from '@material-ui/core/Collapse';
 import CardMedia from '@material-ui/core/CardMedia';
 import $ from 'jquery';
 

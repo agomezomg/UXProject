@@ -13,6 +13,7 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import CardMedia from '@material-ui/core/CardMedia';
+import Collapse from '@material-ui/core/Collapse';
 import $ from 'jquery';
 
 const styles = {
