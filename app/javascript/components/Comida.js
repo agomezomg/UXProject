@@ -14,6 +14,8 @@ import CardContent from '@material-ui/core/CardContent';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import TextsmsIcon from '@material-ui/icons/Textsms';
 import FavoriteIcon from '@material-ui/icons/Favorite';
+import $ from 'jquery';
+
 const styles = {
 
     card: {
@@ -28,16 +30,55 @@ const styles = {
     },
 }; 
 
+const classes = {};
 
 class Comida extends Component {
-
-    classes = {};
     constructor(props) {
-        super(props)
+        super(props);
+        this.classes = props.classes;
+        this.state = {
+          spacing: '40',
+          posts: []
+        }
+        this.getPosts = this.getPosts.bind(this);
+    }
+
+    componentDidMount() {
+        console.log("getting posts...");
+        this.getPosts();
+    }
+
+    handleChange = key => (event, value) => {
+        this.setState({
+            [key]: value,
+        });
+    };
+
+    getPosts() {
+        let token = "Bearer " + localStorage.getItem("jwt")
+        console.log(token)
+        $.ajax({
+            url: "http://localhost:3000/posts.json",
+            type: "GET",
+            beforeSend: function(xhr){xhr.setRequestHeader('Authorization', token)},
+            context: this, // Allows us to use this.setState inside success
+            success: function (result) {
+            console.log(JSON.stringify(result))
+            this.setState({posts: result})
+            }
+        })
     }
 
     render() {
-        const { classes } = this.props;
+        //const { classes } = this.props;
+        let data = this.state.posts.map((doc,i)=> {
+            if (doc.theme=="Comida") {
+              return (
+                <br/>
+                //card contents go here
+            )
+          }
+        });
         return (
             <div style={{height:"1500px",width:"2000px", backgroundImage: `url("https://images.pexels.com/photos/459469/pexels-photo-459469.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")` } }>
                

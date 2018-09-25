@@ -13,6 +13,7 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import CardMedia from '@material-ui/core/CardMedia';
+import $ from 'jquery';
 
 const styles = {
 
@@ -35,6 +36,7 @@ class Fitness extends Component {
     super(props)
     this.classes = props.classes;
     this.state = {
+      spacing: '40',
       posts: []
     }
     this.getPosts = this.getPosts.bind(this);
@@ -42,7 +44,7 @@ class Fitness extends Component {
 
   componentDidMount() {
     console.log("getting posts...");
-    //this.getPosts();
+    this.getPosts();
   }
 
   handleChange = key => (event, value) => {
@@ -67,9 +69,17 @@ class Fitness extends Component {
   }
     
   render() {
-      
-        return (
-            <div style={{height:"1500px",width:"2000px", backgroundImage: `url("https://stepintomyshoes.files.wordpress.com/2010/10/freework.jpg")` } }>
+      let data = this.state.posts.map((doc,i)=> {
+        if (doc.theme=="Fitness") {
+          return(
+            <br/>
+            //card contents go here
+          )
+        }
+      });
+
+      return (
+        <div style={{height:"1500px",width:"2000px", backgroundImage: `url("https://stepintomyshoes.files.wordpress.com/2010/10/freework.jpg")` } }>
                
                 
                 <Card className={classes.card}>

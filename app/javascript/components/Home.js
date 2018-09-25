@@ -91,7 +91,7 @@ class Home extends Component {
     let data = this.state.posts.map((doc,i)=> {
       return(
         <div>
-           <Card className={classes.card}>
+           <Card className={classes.card} key = {i}>
                         <CardHeader
                           avatar={
                             <Avatar aria-label="Recipe" className={classes.avatar}>

@@ -13,6 +13,7 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import CardMedia from '@material-ui/core/CardMedia';
+import $ from 'jquery';
 
 const styles = {
 
@@ -29,8 +30,53 @@ const styles = {
 }; 
 
 class Animales extends Component {
+    constructor(props) {
+        super(props)
+        this.classes = props.classes;
+        this.state = {
+          spacing: '40',
+          posts: []
+        }
+        this.getPosts = this.getPosts.bind(this);
+    }
+
+    componentDidMount() {
+        console.log("getting posts...");
+        this.getPosts();
+    }
+
+    handleChange = key => (event, value) => {
+        this.setState({
+            [key]: value,
+        });
+    };
+
+    getPosts() {
+        let token = "Bearer " + localStorage.getItem("jwt")
+        console.log(token)
+        $.ajax({
+            url: "http://localhost:3000/posts.json",
+            type: "GET",
+            beforeSend: function(xhr){xhr.setRequestHeader('Authorization', token)},
+            context: this, // Allows us to use this.setState inside success
+            success: function (result) {
+            console.log(JSON.stringify(result))
+            this.setState({posts: result})
+            }
+        })
+    }
+
   render() {
-    const { classes } = this.props;
+    //const { classes } = this.props;
+    let data = this.state.posts.map((doc,i)=> {
+            if (doc.theme=="Animales") {
+              return(
+                <br/>
+                //card contents go here
+            )
+        }
+    });
+
     return (
         <div style={{ height: "1300px", width: "2000px", backgroundImage: `url("https://www.dirtiedogphotography.com/wp-content/uploads/2018/01/silhouette1.jpg")` }}>
 
