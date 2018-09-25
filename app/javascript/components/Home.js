@@ -17,6 +17,7 @@ import indigo from '@material-ui/core/colors/indigo';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import TextsmsIcon from '@material-ui/icons/Textsms';
 import './App.css';
+import $ from 'jquery';
 
 const styles = {
   palette: {
@@ -46,16 +47,22 @@ const styles = {
   },
 };
 
+const classes = {};
 
 class Home extends Component {
-  classes = {};
   constructor(props) {
     super(props)
     this.classes = props.classes;
     this.state = {
       spacing: '40',
-    }
+      posts: []
+    };
+    this.getPosts = this.getPosts.bind(this);
+  }
 
+  componentDidMount() {
+    console.log("getting posts...");
+    this.getPosts();
   }
 
   handleChange = key => (event, value) => {
@@ -64,23 +71,31 @@ class Home extends Component {
     });
   };
 
+  getPosts() {
+    let token = "Bearer " + localStorage.getItem("jwt")
+    console.log(token)
+    $.ajax({
+      url: "http://localhost:3000/posts.json",
+      type: "GET",
+      beforeSend: function(xhr){xhr.setRequestHeader('Authorization', token)},
+      context: this, // Allows us to use this.setState inside success
+      success: function (result) {
+        console.log(JSON.stringify(result))
+        this.setState({posts: result})
+      }
+    })
+  }
+
   render() {
-    const { classes } = this.props;
-    const { spacing } = this.state;
-    return (
-      <div className={classes.root} style={{ height: "1000px", width: "100%", backgroundImage: `url("https://bruceellingson.com/wallpaper/goose/goose1920x1200.jpg")` }}>
+    console.log(this.state.posts);
+    let data = this.state.posts.map((doc,i)=> {
+      return(
         <div>
-          <div>
-            <Grid container className={classes.root} spacing={20}>
-              <Grid item xs={12}>
-                <Grid container className={classes.demo} justify="center" spacing={Number(spacing)}>
-                  {[0, 1, 2, 3].map(value => (
-                    <Grid key={value} item>
-                      <Card className={classes.card}>
+           <Card className={classes.card} key = {i}>
                         <CardHeader
                           avatar={
                             <Avatar aria-label="Recipe" className={classes.avatar}>
-                              R
+                              A
                             </Avatar>
                           }
                           action={
@@ -88,16 +103,16 @@ class Home extends Component {
                               <MoreVertIcon />
                             </IconButton>
                           }
-                          title="Title"
-                          subheader="Categoria"
+                          title={doc.title}
+                          subheader={doc.theme}
                         />
 
                         <CardMedia>
-                          <img src='https://pbs.twimg.com/profile_images/784171046035488768/fSF_FXpz_400x400.jpg' />
+                          <img src={doc.photourl} />
                         </CardMedia>
                         <CardContent>
                           <Typography component="p">
-                            Description del post
+                            {doc.description}
                           </Typography>
                         </CardContent>
                         <CardActions className={classes.actions} disableActionSpacing>
@@ -115,13 +130,16 @@ class Home extends Component {
 
                           </CardContent>
                         </Collapse>
-                      </Card>
-                    </Grid>
-                  ))}
-                </Grid>
-              </Grid>
-            </Grid>
-          </div>
+                      </Card> 
+        </div>
+      );
+    })
+
+    return (
+      <div>
+        <div className="text-center" >
+          <h2 className="text-center" >Public Posts</h2>
+          {data}
         </div>
       </div>
     );
@@ -163,3 +181,5 @@ export default withStyles(styles)(Home);
                         </Button>
                       </CardActions>
                     </Card>*/
+
+            

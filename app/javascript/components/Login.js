@@ -52,6 +52,7 @@ class Login extends Component {
           })
           $("#email").val("");
           $("#password").val("");
+          alert("logged in successfully")
     }
 
     render() {
