@@ -25,12 +25,8 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
+    byebug
     @post = Post.new(post_params)
-    if @current_user!=nil
-      @post.user_id = @current_user.id
-    else
-      @post.user_id = nil
-    end
     respond_to do |format|
       if @post.save && @post.user_id!=nil
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
@@ -74,6 +70,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title,:description,:theme,:photourl)
+      params.require(:post).permit(:title,:description,:theme,:photourl, :user_id).merge(user: current_user)
     end
 end

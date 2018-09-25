@@ -9,8 +9,11 @@ import Button from '@material-ui/core/Button';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import TextField from '@material-ui/core/TextField';
 import AccountCircle from '@material-ui/icons/AccountCircle';
+import InsertPhoto from '@material-ui/icons/InsertPhoto';
+import TextFormat from '@material-ui/icons/TextFormat';
 import './createPost.css';
 import Input from '@material-ui/core/Input';
+import $ from 'jquery';
 
 const styles = theme => ({
     button: {
@@ -38,9 +41,13 @@ class createPost extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            age: '',
+            type: '',
             open: false,
         };
+        this.handleChange = this.handleChange.bind(this);
+        this.handleClose = this.handleClose.bind(this);
+        this.handleOpen =  this.handleOpen.bind(this);
+        this.createpost = this.createpost.bind(this);
     }
     handleChange = event => {
         this.setState({ [event.target.name]: event.target.value });
@@ -54,6 +61,29 @@ class createPost extends Component {
         this.setState({ open: true });
     };
 
+    createpost(){
+        const title = $("#title").val(); 
+        const type = $("#dropdown").val();
+        const des = $("#description").val();
+        const photo = $("#photo").val();
+        let resp = {"post":{"title":title,"description":des,"theme":type,"photourl":photo}};
+        let token = "Bearer " + localStorage.getItem("jwt");
+        console.log(resp);
+        $.ajax({
+            url: "http://localhost:3000/posts",
+            type: "POST",
+            data: resp,
+            dataType: "json",
+            beforeSend: function(xhr){xhr.setRequestHeader('Authorization', token)},
+            success: function (result) {
+              console.log(result)
+            }
+        });
+        // $("#title").val(""); 
+        // $("#dropdown").val("");
+        // $("#description").val("");
+        // $("#photo").val("");
+    }
 
 
     render() {
@@ -64,7 +94,7 @@ class createPost extends Component {
                 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'baseline', margin: 50 }}>
 
                     <form autoComplete="off">
-                        <Button className={classes.button} onClick={this.handleOpen}>
+                        <Button className={classes.button}>
                             Escoga el tema
                     </Button>
                         <FormControl className={classes.formControl}>
@@ -73,11 +103,11 @@ class createPost extends Component {
                                 open={this.state.open}
                                 onClose={this.handleClose}
                                 onOpen={this.handleOpen}
-                                value={this.state.age}
+                                value={this.state.type}
                                 onChange={this.handleChange}
                                 inputProps={{
-                                    name: 'age',
-                                    id: 'demo-controlled-open-select',
+                                    name: 'type',
+                                    id: 'dropdown',
                                 }}
                             >
                                 <MenuItem value="">
@@ -99,6 +129,7 @@ class createPost extends Component {
                         id="input-with-icon-textfield"
                         label="Titulo"
                         InputProps={{
+                            id: "title" ,
                             startAdornment: (
                                 <InputAdornment position="start">
                                     <AccountCircle />
@@ -110,11 +141,27 @@ class createPost extends Component {
                 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: 10 }}> 
                     <FormControl className={classes.formControl}>
                         <InputLabel htmlFor="name-simple">Desciption</InputLabel>
-                        <Input id="name-simple" value={this.state.name} onChange={this.handleChange} />
+                        <Input id="description" value={this.state.name} onChange={this.handleChange} 
+                        startAdornment={
+                            <InputAdornment position="start">
+                                <TextFormat />
+                            </InputAdornment>
+                        } />
+                    </FormControl>
+                </div>
+                <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: 10 }}> 
+                    <FormControl className={classes.formControl}>
+                        <InputLabel htmlFor="name-simple">PhotoURL</InputLabel>
+                        <Input id="photo" value={this.state.name} onChange={this.handleChange}
+                        startAdornment={
+                            <InputAdornment position="start">
+                                <InsertPhoto />
+                            </InputAdornment>
+                        } />
                     </FormControl>
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: 10 }}>
-                    <Button variant="contained" color="secondary" className={classes.button}>
+                    <Button variant="contained" color="secondary" className={classes.button} onClick={this.createpost}>
                         Crear Post
                     </Button>
                 </div>
