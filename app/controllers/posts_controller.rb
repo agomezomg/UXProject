@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, except: [:new, :create, :index,:update]
+  before_action :authenticate_user, except: [:index]
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   # GET /posts
@@ -27,8 +27,9 @@ class PostsController < ApplicationController
   def create
     byebug
     @post = Post.new(post_params)
+    @post.user_id = current_user.id
     respond_to do |format|
-      if @post.save && @post.user_id!=nil
+      if @post.save
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, location: @post }
       else
