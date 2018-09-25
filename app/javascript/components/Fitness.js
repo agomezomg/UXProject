@@ -28,15 +28,46 @@ const styles = {
     },
 }; 
 
-class Fitness extends Component {
-    classes = {};
-    constructor(props) {
-        super(props)
-    }
+const classes = {};
 
+class Fitness extends Component {
+  constructor(props) {
+    super(props)
+    this.classes = props.classes;
+    this.state = {
+      posts: []
+    }
+    this.getPosts = this.getPosts.bind(this);
+  }
+
+  componentDidMount() {
+    console.log("getting posts...");
+    //this.getPosts();
+  }
+
+  handleChange = key => (event, value) => {
+    this.setState({
+      [key]: value,
+    });
+  };
+
+  getPosts() {
+    let token = "Bearer " + localStorage.getItem("jwt")
+    console.log(token)
+    $.ajax({
+      url: "http://localhost:3000/posts.json",
+      type: "GET",
+      beforeSend: function(xhr){xhr.setRequestHeader('Authorization', token)},
+      context: this, // Allows us to use this.setState inside success
+      success: function (result) {
+        console.log(JSON.stringify(result))
+        this.setState({posts: result})
+      }
+    })
+  }
     
   render() {
-    const { classes } = this.props;
+      
         return (
             <div style={{height:"1500px",width:"2000px", backgroundImage: `url("https://stepintomyshoes.files.wordpress.com/2010/10/freework.jpg")` } }>
                

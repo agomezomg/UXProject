@@ -79,6 +79,7 @@ class createPost extends Component {
               console.log(result)
             }
         });
+        alert("Created post.");
         // $("#title").val(""); 
         // $("#dropdown").val("");
         // $("#description").val("");
