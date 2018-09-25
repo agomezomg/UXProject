@@ -138,7 +138,9 @@ class Home extends Component {
       <div style={{ height: "1000px", width: "100%", backgroundImage: `url("https://bruceellingson.com/wallpaper/goose/goose1920x1200.jpg")` }}>
         <div className="text-center" >
           <h2 className="text-center" >Public Posts</h2>
-          {data}
+          <div className="List">
+            {data}
+          </div>
         </div>
       </div>
     );

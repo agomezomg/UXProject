@@ -70,7 +70,7 @@ class Animales extends Component {
   render() {
     //const { classes } = this.props;
     let data = this.state.posts.map((doc,i)=> {
-            if (doc.theme=="Animales") {
+            if (doc.theme=="Animal") {
               return(
                <div>
            <Card className={classes.card} key = {i} style={{width:"370px"}}>
