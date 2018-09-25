@@ -38,8 +38,6 @@ class Register extends Component {
         const password = $("#password").val();
         const request = {"auth":{"email":email,"password":password}};
         let resp =  {"user":{"email":email,"password":password,"password_confirmation":password}};
-        console.log(request);
-        console.log(resp);
         $.ajax({
             url: "http://localhost:3000/users",
             type: "POST",
@@ -59,7 +57,6 @@ class Register extends Component {
               localStorage.setItem("jwt", result.jwt)
             }
         });
-        console.log(localStorage.getItem("jwt"));
         $("#email").val("");
         $("#password").val("");
     }

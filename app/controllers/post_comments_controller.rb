@@ -1,4 +1,5 @@
 class PostCommentsController < ApplicationController
+  before_action :authenticate
   before_action :set_post_comment, only: [:show, :edit, :update, :destroy]
 
   # GET /post_comments
@@ -25,6 +26,7 @@ class PostCommentsController < ApplicationController
   # POST /post_comments.json
   def create
     @post_comment = PostComment.new(post_comment_params)
+    # @post_comment.user_id = current_user.id
 
     respond_to do |format|
       if @post_comment.save
@@ -69,6 +71,5 @@ class PostCommentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_comment_params
-      params.fetch(:post_comment, {})
-    end
+      params.require(:post_comment)
 end

@@ -17,6 +17,7 @@ import indigo from '@material-ui/core/colors/indigo';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import TextsmsIcon from '@material-ui/icons/Textsms';
 import './App.css';
+import $ from 'jquery';
 
 const styles = {
   palette: {
@@ -55,11 +56,13 @@ class Home extends Component {
     this.state = {
       spacing: '40',
       posts: []
-    }
+    };
+    this.getPosts = this.getPosts.bind(this);
   }
 
   componentDidMount() {
-    alert("componentDidMount");
+    console.log("getting posts...");
+    this.getPosts();
   }
 
   handleChange = key => (event, value) => {
@@ -67,6 +70,21 @@ class Home extends Component {
       [key]: value,
     });
   };
+
+  getPosts() {
+    let token = "Bearer " + localStorage.getItem("jwt")
+    console.log(token)
+    $.ajax({
+      url: "http://localhost:3000/posts",
+      type: "GET",
+      beforeSend: function(xhr){xhr.setRequestHeader('Authorization', token)},
+      context: this, // Allows us to use this.setState inside success
+      success: function (result) {
+        console.log(result)
+        this.setState({posts: JSON.stringify(result)})
+      }
+    })
+  }
 
   render() {
     const { classes } = this.props;
